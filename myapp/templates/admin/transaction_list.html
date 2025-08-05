@@ -1,0 +1,6 @@
+<h2>Transactions</h2>
+<ul>
+  {% for t in transactions %}
+    <li>{{ t.user.username }} - {{ t.product_type.name }} - ₦{{ t.amount }} ({{ t.status }})</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,8 @@
+<h2>Icon List</h2>
+<a href="/admin/add-icon/">Add Icon</a>
+<ul>
+  {% for icon in icons %}
+    <li>{{ icon.name }} <img src="{{ icon.icon.url }}" height="30" /> 
+    <a href="/admin/delete-icon/{{ icon.id }}/">Delete</a></li>
+  {% endfor %}
+</ul>

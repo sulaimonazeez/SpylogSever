@@ -1,0 +1,12 @@
+<h2>Add Product</h2>
+<form method="post">{% csrf_token %}
+  <input type="text" name="name" placeholder="Name" required />
+  <textarea name="description" placeholder="Description"></textarea>
+  <input type="number" name="price" placeholder="Price" required />
+  <select name="icon">
+    {% for icon in icons %}
+      <option value="{{ icon.id }}">{{ icon.name }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Add Product</button>
+</form>

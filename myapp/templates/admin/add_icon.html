@@ -1,0 +1,6 @@
+<h2>Add Icon</h2>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+  <input type="text" name="name" placeholder="Icon name" required />
+  <input type="file" name="icon" required />
+  <button type="submit">Add</button>
+</form>

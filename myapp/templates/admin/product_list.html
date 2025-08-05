@@ -1,0 +1,8 @@
+<h2>Product List</h2>
+<a href="/admin/add-product/">Add Product</a>
+<ul>
+  {% for product in products %}
+    <li>{{ product.name }} (₦{{ product.price }})
+    <a href="/admin/delete-product/{{ product.id }}/">Delete</a></li>
+  {% endfor %}
+</ul>

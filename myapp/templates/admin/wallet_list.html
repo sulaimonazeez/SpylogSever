@@ -1,0 +1,6 @@
+<h2>User Wallets</h2>
+<ul>
+  {% for wallet in wallets %}
+    <li>{{ wallet.user.username }} - ₦{{ wallet.balance }}</li>
+  {% endfor %}
+</ul>
